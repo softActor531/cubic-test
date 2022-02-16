@@ -2,7 +2,6 @@ import React, {useState} from "react";
 
 import { TextField } from "@mui/material";
 
-// eslint-disable-next-line react/prop-types
 export default function SearchBar({handleSearch}) {
   const [keyword, setKeyword] = useState('');
   const onSearch = (e) => {

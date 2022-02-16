@@ -6,7 +6,6 @@ import shortid from "shortid";
 import SearchBar from "./SearchBar";
 
 // import mui components
-// import { makeStyles } from "@mui/styles";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -47,6 +46,7 @@ export default function EntryList() {
           </TableHead>
           <TableBody>
           {
+            selectedEntries.length > 0 ?
             selectedEntries.map((entry) => {
               return (
                 <TableRow key={shortid.generate()}>
@@ -56,6 +56,7 @@ export default function EntryList() {
                 </TableRow>
               )
             })
+            : <h3 align="center">No entries</h3>
           }
           </TableBody>
         </Table>
