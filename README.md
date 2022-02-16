@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 I created 3 components AddContact (add an entry to the list), EntryList(displaying the past entries), SearchBar(searching the entries with names or phone number).
 In the redux, I create an action for adding an entry to the list.
 
