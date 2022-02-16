@@ -56,7 +56,9 @@ export default function EntryList() {
                 </TableRow>
               )
             })
-            : <h3 align="center">No entries</h3>
+            : <TableRow>
+                <TableCell colspan={3} align="center">No entries</TableCell>
+              </TableRow>            
           }
           </TableBody>
         </Table>

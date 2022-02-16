@@ -28,6 +28,9 @@ export default function AddContact() {
       lastName: lastName,
       phoneNumber: phoneNumber
     }));
+    setFirstName('');
+    setLastName('');
+    setPhoneNumber('');
   }
   return (
     <Stack spacing={2} direction="row" className={classes.wrapper}>
