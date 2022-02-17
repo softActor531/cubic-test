@@ -29,7 +29,9 @@ export default function EntryList() {
       setSelectedEntries(entryList);
     }
     const entries = entryList.filter((entry) => {
-      return entry.firstName.includes(keyword) || entry.lastName.includes(keyword) || entry.phoneNumber.includes(keyword);
+      return entry.firstName.toLowerCase().includes(keyword.toLowerCase())
+       || entry.lastName.toLowerCase().includes(keyword.toLowerCase())
+       || entry.phoneNumber.includes(keyword);
     });
     setSelectedEntries(entries);
   }
@@ -57,7 +59,7 @@ export default function EntryList() {
               )
             })
             : <TableRow>
-                <TableCell colspan={3} align="center">No entries</TableCell>
+                <TableCell colSpan={3} align="center">No entries</TableCell>
               </TableRow>            
           }
           </TableBody>
